@@ -880,6 +880,22 @@ Sitemap: {site_url}/sitemap.xml
         return False
 
 
+def copy_cname() -> bool:
+    """
+    复制 CNAME 文件到输出目录（GitHub Pages 自定义域名）。
+    """
+    cname_file = Path("CNAME")
+    if not cname_file.exists():
+        return True
+
+    try:
+        shutil.copy2(cname_file, SITE_DIR / "CNAME")
+        return True
+    except Exception as e:
+        print(f"❌ 复制 CNAME 失败: {e}")
+        return False
+
+
 def build(force: bool = False) -> bool:
     """
     完整构建：HTML + PDF + 资源。
@@ -909,6 +925,7 @@ def build(force: bool = False) -> bool:
     results.append(copy_content_assets(force))
     results.append(generate_sitemap())
     results.append(generate_robots_txt())
+    results.append(copy_cname())
 
     print("-" * 60)
     if all(results):
