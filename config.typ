@@ -12,7 +12,7 @@
   title: "Hongwei Cai",
   author: "Hongwei Cai",
   description: "Postdoctoral fellow in intelligent human organoid microphysiological systems, biocomputing, microfluidics, and neuroengineering.",
-  site-url: "https://your-github-username.github.io/",
+  site-url: "https://hwcai.github.io/",
   lang: "en",
 
   header-elements: (
