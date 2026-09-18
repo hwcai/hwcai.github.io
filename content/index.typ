@@ -2,8 +2,8 @@
 #import "_cv-content.typ": contact-note, profile-summary, research-interests, research-highlights, selected-publications, brainoware-coverage
 
 #show: template.with(
-  title: "Hongwei Cai",
-  description: "Personal website of Hongwei Cai.",
+  title: "Hongwei Cai | Postdoctoral Fellow, Indiana University Bloomington",
+  description: "Hongwei Cai is a postdoctoral fellow at Indiana University Bloomington building intelligent biohybrid organoid systems for precision medicine and AI computing.",
 )
 
 #tufted.margin-note[
@@ -11,7 +11,7 @@
     class: "profile-photo",
     image("imgs/headshot.jpg", alt: "Portrait of Hongwei Cai"),
   )
-  #contact-note
+  #contact-note()
 ]
 
 = About me

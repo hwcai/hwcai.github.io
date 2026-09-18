@@ -28,6 +28,10 @@
   })
 ]
 
+#tufted.margin-note[
+  featured as cover story
+]
+
 #html.div(class: "publication-filter", {
   html.div(class: "publication-filter-row", {
     html.span(class: "publication-filter-label", [Role])

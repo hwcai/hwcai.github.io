@@ -11,16 +11,47 @@ Add your custom CSS styles here to override or extend the default styles.
     margin: 0.5rem 0 1.5rem;
 }
 
+.marginnote:has(.profile-photo) {
+    line-height: 2.1;
+}
+
+.marginnote > img {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.75rem;
+    border: 1px solid var(--theme-table-border, #ddd);
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
 .cover-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin: 1.75rem 0 0.5rem;
 }
 
 .cover-grid img {
     display: block;
     width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    margin: 0;
+    border: 1px solid var(--theme-table-border, #ddd);
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.icon-link-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.1em;
+}
+
+.icon-link-icon img {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
 }
 
 .marginnote .profile-photo {
@@ -30,8 +61,12 @@ Add your custom CSS styles here to override or extend the default styles.
 
 .marginnote .profile-photo img {
     display: block;
-    width: 100%;
+    width: 140px;
+    max-width: 60%;
     margin: 0;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .publication-filter {
