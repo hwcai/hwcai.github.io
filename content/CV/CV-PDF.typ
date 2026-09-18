@@ -1,4 +1,4 @@
-#import "../_cv-content.typ": profile-summary, research-interests, education, research-experience, research-highlights, publication-summary, selected-publications, first-authored-publications, collaborative-publications, pending-work, granted-patents, filed-patents, awards-honors, professional-service
+#import "../_cv-content.typ": profile-summary, research-interests, education, research-experience, research-highlights, publication-summary, selected-publications, first-authored-publications, collaborative-publications, granted-patents, filed-patents, awards-honors, professional-service
 
 #set page(height: auto, margin: 1in)
 #show link: it => underline(it)

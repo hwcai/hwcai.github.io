@@ -1,5 +1,5 @@
 #import "../index.typ": template, tufted
-#import "../_cv-content.typ": publication-summary, render-pub-list-html, all-publications-data, pending-work
+#import "../_cv-content.typ": publication-summary, render-pub-list-html, all-publications-data
 
 #show: template.with(
   title: "Publication",
