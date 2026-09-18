@@ -1,0 +1,163 @@
+/*******************************************************************************
+CUSTOM STYLES
+
+Add your custom CSS styles here to override or extend the default styles.
+*******************************************************************************/
+
+.lede {
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.cover-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1.75rem 0 0.5rem;
+}
+
+.cover-grid img {
+    display: block;
+    width: 100%;
+}
+
+.marginnote .profile-photo {
+    display: block;
+    margin: 0 0 0.85rem;
+}
+
+.marginnote .profile-photo img {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.publication-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1.5rem 0 2rem;
+    width: 55%;
+}
+
+.publication-filter-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.publication-filter-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    min-width: 3.75rem;
+}
+
+.publication-filter-hint {
+    font-size: 0.95rem;
+}
+
+.pub-year-select {
+    background: transparent;
+    border: 1px solid var(--theme-table-border, #aaa);
+    border-radius: 4px;
+    color: inherit;
+    font: inherit;
+    padding: 0.3rem 0.45rem;
+    width: 5.25rem;
+    cursor: pointer;
+}
+
+.pub-year-select:focus-visible {
+    border-color: currentColor;
+    outline: 2px solid currentColor;
+    outline-offset: 1px;
+}
+
+/* Pill-style buttons for the Role filter and Reset action */
+.pub-filter-button,
+.pub-role-pill {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    background: var(--theme-code-bg);
+    border: 1px solid var(--theme-table-border);
+    color: var(--theme-text);
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.6;
+}
+
+.pub-filter-button:hover,
+.pub-role-pill:hover,
+.pub-filter-button:focus-visible,
+.pub-role-pill:focus-visible {
+    border-color: var(--theme-text);
+}
+
+.pub-role-pill.is-active,
+.pub-filter-button.is-active {
+    background: var(--theme-text);
+    border-color: var(--theme-text);
+    color: var(--theme-bg);
+}
+
+.pub-role-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.publication-filter-reset {
+    margin-left: 0.25rem;
+}
+
+.peer-group {
+    width: 55%;
+}
+
+.peer-group[hidden] {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .publication-filter,
+    .peer-group {
+        width: 100%;
+    }
+}
+
+/* Expandable publication entries: replace list bullet with a chevron */
+.peer-group li:has(> details) {
+    list-style: none !important;
+}
+
+.peer-group details > summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.peer-group details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.peer-group details > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.peer-group details[open] > summary::before {
+    content: "\25BE";
+}
+
+.pub-note {
+    display: block;
+    margin-top: 0.2em;
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--theme-secondary-text);
+}
